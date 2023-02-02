@@ -123,7 +123,7 @@ function bossAtaque() {
 function aleatorioAtaque() {
     let dado12 = Math.floor(Math.random() * 13);
 
-    if (dado12 >= 7) {
+    if (dado12 <= 9) {
         narrador.innerHTML = lili.id + " Usou Linux ataque.";
         lili.Linux(Jogadora);
     } 
@@ -259,7 +259,7 @@ function bossGanhouJogo() {
 <div id="tela">
     <div id="parteCima">
         <div id="texto">
-            <div id = "titulo1" >Só existem 2 tipos de pessoas:</div>
+            <div id = "titulo1" >Só existem 10 tipos de pessoas:</div>
             <div id = "titulo2"> as que entendem binário e as que não entendem.</div>
         </div>
         <div id="botaoInicar">
