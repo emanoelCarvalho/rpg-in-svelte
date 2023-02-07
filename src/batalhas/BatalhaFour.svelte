@@ -279,7 +279,7 @@ function aleatorioAtaque() {
     } 
     else {
         narrador.innerHTML = Allan.id + " Usou o ataque Assembly.";
-        Allan.AntiGadismo(Jogadora);
+        Allan.Assembly(Jogadora);
 
         setTimeout(() => {
 
