@@ -45,7 +45,7 @@ function ataqueProta() {
     botaoAtt2.style.visibility = "hidden";
     botaoAtt3.style.visibility = "hidden";
 
-    if (dado6 % 2 == 0) {
+    if (dado6 <= 4) {
         narrador.innerHTML = Jogadora.id + " Atacou com chuva da códigos.";
         Jogadora.ChuvaDeCodigos(Allan);
         contadorAtq++;
@@ -243,7 +243,7 @@ function curaProtagonista() {
 function bossAtaque() {
     let dado6 = Math.floor(Math.random() * 7);
 
-    if (dado6 % 2 == 0) {
+    if (dado6 <= 4) {
         aleatorioAtaque();
     } 
     else {
