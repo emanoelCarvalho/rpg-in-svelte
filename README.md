@@ -1,6 +1,6 @@
 # Svelte + Vite
 
-This template should help get you started developing with Svelte in Vite.
+Este template, foi desenvolvido, com Vite + Svelte
 
 ## Recommended IDE Setup
 
