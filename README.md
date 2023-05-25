@@ -1,47 +1,86 @@
-# Svelte + Vite
+# Projeto de Conclusão - Disciplina de Lógica de Programação e Estrutura de Dados - Período 2022.2
 
-Este template, foi desenvolvido, com Vite + Svelte
+Este é o repositório do projeto de conclusão da disciplina de Lógica de Programação e Estrutura de Dados, realizado no período 2022.2. O projeto foi desenvolvido utilizando HTML5, CSS3, Svelte, Canvas e JavaScript.
 
-## Recommended IDE Setup
+## Descrição do Projeto
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+O objetivo deste projeto foi criar um jogo em estilo RPG que incorpora conceitos de lógica de programação e estrutura de dados, demonstrando a aplicação prática dos conhecimentos adquiridos durante o semestre.
 
-## Need an official Svelte framework?
+Nosso jogo, intitulado "Jornada para á aprovação", se passa em um mundo escolar onde os jogadores assumem o papel de um aluno em uma jornada épica. O objetivo é explorar o curso, enfrentar  bosses e evoluir o personagem através da derrota de cada boss.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+O jogo utiliza uma variedade de conceitos de lógica de programação e estrutura de dados para controlar o fluxo do jogo, gerenciar o estado do personagem, implementar a mecânica de combate e interação com o ambiente.
 
-## Technical considerations
+## Integrantes
 
-**Why use this over SvelteKit?**
+- Emanoel Carvalho
+- Cleiton Lucas
+- Alef Thiago
+- Fábio José
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+## Funcionalidades
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+- Criação e personalização de um personagem com atributos e habilidades.
+- Exploração de um mundo aberto, com diferentes locais e cenários.
+- Encontros aleatórios com inimigos e batalhas por turno.
+- Sistema de inventário para coleta e uso de itens.
+- Missões e objetivos a serem concluídos.
+- Sistema de evolução e progressão do personagem.
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+## Tecnologias Utilizadas
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+- HTML
+- CSS
+- Svelte
+- JavaScript
+- Canvas
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+## Como Executar o Projeto
 
-**Why include `.vscode/extensions.json`?**
+Para executar o projeto em sua máquina local, siga as instruções abaixo:
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+1. Certifique-se de ter o ambiente Node.js instalado em sua máquina.
+2. Clone este repositório em sua máquina local usando o seguinte comando:
 
-**Why enable `checkJs` in the JS template?**
+   ```
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   ```
 
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
+3. Navegue até a pasta do repositório:
 
-**Why is HMR not preserving my local component state?**
+   ```
+   cd nome-do-repositorio
+   ```
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
+4. Instale as dependências do projeto:
 
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+   ```
+   npm install
+   ```
 
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+5. Inicie o servidor de desenvolvimento:
+
+   ```
+   npm run dev
+   ```
+
+6. Abra o jogo em seu navegador acessando o seguinte endereço:
+
+   ```
+   http://localhost:5173
+   ```
+
+Agora você poderá jogar o "Jornada para a aprovação" em seu navegador localmente.
+
+## Contribuição
+
+Se você deseja contribuir para o projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request. Suas contribuições são muito bem-vindas!
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo `LICENSE` para obter mais informações.
+
+## Contato
+
+Se você tiver alguma dúvida ou precisar entrar em contato, sinta-se à vontade para enviar um e-mail para hemanoel718@gmail.com.
+
+Esperamos que você se divirta jogando o "Jornada para á aprovação"!
