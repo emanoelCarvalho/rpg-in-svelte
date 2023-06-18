@@ -66,7 +66,7 @@ Para executar o projeto em sua máquina local, siga as instruções abaixo:
 6. Abra o jogo em seu navegador acessando o seguinte endereço:
 
    ```
-   http://localhost:5173
+   http://localhost:8080
    ```
 
 Agora você poderá jogar o "Jornada para a aprovação" em seu navegador localmente.
