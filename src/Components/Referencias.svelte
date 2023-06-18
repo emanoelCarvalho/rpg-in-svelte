@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 
-    import { trocarestadodojogo } from "./Estado";
+    import { trocarestadodojogo } from "../stores/Estado";
 
 
     setTimeout(() => {

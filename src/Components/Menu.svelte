@@ -1,8 +1,8 @@
 <script>
 // @ts-nocheck
 
-  import { estado } from "./Estado";
-  import { trocarestadodojogo } from "./Estado";
+  import { estado } from "../stores/Estado";
+  import { trocarestadodojogo } from "../stores/Estado";
 
   setTimeout(() => {
     title.style.fontSize = "1.5em";

@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 
-    import { trocarestadodojogo } from "./Estado";
+    import { trocarestadodojogo } from "../stores/Estado";
 
 setTimeout(() => {
     p1.style.fontSize = "1.8em";
