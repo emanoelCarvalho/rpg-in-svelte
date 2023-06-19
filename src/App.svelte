@@ -9,10 +9,10 @@
   import Sobre from "./Components/Sobre.svelte";
   import Jogar from "./Components/Jogar.svelte";
   import Referencias from "./Components/Referencias.svelte";
-  import { blocosSaida } from "./ultilitarios/Saidablocos";
-  import { blocos } from "./ultilitarios/Blocos";
-  import { mapaInicial } from "./ultilitarios/Mapa";
-  import { mapaSala } from "./ultilitarios/Mapa";
+  import { blocosSaida } from "./Data/Saidablocos";
+  import { blocos } from "./Data/Blocos";
+  import { mapaInicial } from "./Data/Mapa";
+  import { mapaSala } from "./Data/Mapa";
   import BatalhaOne from "./Components/BatalhaOne.svelte";
   import BatalhaTwo from "./Components/BatalhaTwo.svelte";
   import Ajuda from "./Components/Ajuda.svelte";
