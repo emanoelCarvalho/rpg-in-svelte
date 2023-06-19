@@ -2,10 +2,10 @@
     // @ts-nocheck
 
     //import { estado, trocarestadodojogo } from "../Estado";
-    import { Jogadora } from "../personagens/Protagonista";
-    import { lili } from "../personagens/Liliane";
+    import { Jogadora } from "../Data/Protagonista";
+    import { lili } from "../Data/Liliane";
     import { writable } from "svelte/store";
-    import Jogar from "../Components/Jogar.svelte";
+    import Jogar from "./Jogar.svelte";
     import { trocarestadodojogo } from "../stores/Estado";
     import { set_attributes } from "svelte/internal";
 

@@ -1,8 +1,8 @@
 <script>
     //@ts-nocheck
     import { trocarestadodojogo } from "../stores/Estado";
-    import { Jogadora } from "../personagens/Protagonista";
-    import { Allan } from "../personagens/Allan";
+    import { Jogadora } from "../Data/Protagonista";
+    import { Allan } from "../Data/Allan";
 
     /*Bloco Do Protagonista, Battle 4*/
     let contadorAtq = 0;

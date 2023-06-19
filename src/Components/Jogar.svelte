@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 
-    import { Jogadora } from "../personagens/Protagonista.js";
+    import { Jogadora } from "../Data/Protagonista.js";
 
 setTimeout(() => {
     if(!Jogadora.certificadoLili){

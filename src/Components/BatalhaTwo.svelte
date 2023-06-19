@@ -1,8 +1,8 @@
 <script>
     //@ts-nocheck
     import { estado } from "../stores/Estado";
-    import { Jogadora } from "../personagens/Protagonista";
-    import { David } from "../personagens/David";
+    import { Jogadora } from "../Data/Protagonista";
+    import { David } from "../Data/David";
     import { writable } from "svelte/store";
     import Jogar from "../Components/Jogar.svelte";
     import { trocarestadodojogo } from "../stores/Estado";

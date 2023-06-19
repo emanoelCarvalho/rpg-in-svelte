@@ -3,8 +3,8 @@
 
     import { writable } from "svelte/store";
     import { estado, trocarestadodojogo } from "../stores/Estado";
-    import { Jogadora } from "../personagens/Protagonista"
-    import { Ranieri } from "../personagens/Ranieri"
+    import { Jogadora } from "../Data/Protagonista"
+    import { Ranieri } from "../Data/Ranieri"
 
     let contadorAtq = 0;
 

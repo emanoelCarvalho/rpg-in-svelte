@@ -1,9 +1,9 @@
 <script>
-  import { lili } from "./personagens/Liliane"
-  import { David } from "./personagens/David"
-  import { Ranieri } from "./personagens/Ranieri"
-  import { Allan } from "./personagens/Allan"
-  import { Jogadora } from "./personagens/Protagonista"
+  import { lili } from "./Data/Liliane"
+  import { David } from "./Data/David"
+  import { Ranieri } from "./Data/Ranieri"
+  import { Allan } from "./Data/Allan"
+  import { Jogadora } from "./Data/Protagonista"
   import { estado, trocarestadodojogo } from "./stores/Estado";
   import Menu from "./Components/Menu.svelte";
   import Sobre from "./Components/Sobre.svelte";
@@ -13,12 +13,12 @@
   import { blocos } from "./ultilitarios/Blocos";
   import { mapaInicial } from "./ultilitarios/Mapa";
   import { mapaSala } from "./ultilitarios/Mapa";
-  import BatalhaOne from "./batalhas/BatalhaOne.svelte";
-  import BatalhaTwo from "./batalhas/BatalhaTwo.svelte";
+  import BatalhaOne from "./Components/BatalhaOne.svelte";
+  import BatalhaTwo from "./Components/BatalhaTwo.svelte";
   import Ajuda from "./Components/Ajuda.svelte";
   import Inicio from "./Components/Inicio.svelte";
-  import BatalhaThree from "./batalhas/BatalhaThree.svelte";
-  import BatalhaFour from "./batalhas/BatalhaFour.svelte";
+  import BatalhaThree from "./Components/BatalhaThree.svelte";
+  import BatalhaFour from "./Components/BatalhaFour.svelte";
   import Final from "./Components/Final.svelte";
   import John from "./Components/John.svelte";
   import Placido from "./Components/Placido.svelte";
