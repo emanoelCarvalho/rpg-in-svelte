@@ -3,10 +3,12 @@
 
     import { writable } from "svelte/store";
     import { estado, trocarestadodojogo } from "../stores/Estado";
-    import { Jogadora } from "../Data/Protagonista"
-    import { Ranieri } from "../Data/Ranieri"
+    import { Jogadora } from "../Data/Protagonista";
+    import { Ranieri } from "../Data/Ranieri";
 
     let contadorAtq = 0;
+    let protaHp;
+    let bossHp;
 
     setTimeout(() => {
         titulo1.style.fontSize = "1.5em";
@@ -27,6 +29,9 @@
 
         Ranieri.hp = 200;
         bossVida.style.width = Ranieri.hp + "px";
+
+        protaHp = Jogadora.hp;
+        bossHp = Ranieri.hp;
 
         Jogadora.hp = 199;
         Jogadora.Ataque = 18;
@@ -63,6 +68,7 @@
                     }, 1000);
                 } else {
                     bossVida.style.width = Ranieri.hp + "px";
+                    bossHp = Ranieri.hp;
 
                     setTimeout(() => {
                         bossAtaque();
@@ -98,6 +104,7 @@
                     }, 1000);
                 } else {
                     bossVida.style.width = Ranieri.hp + "px";
+                    bossHp = Ranieri.hp;
 
                     setTimeout(() => {
                         bossAtaque();
@@ -134,6 +141,7 @@
                     } else {
                         luizaHotDog.style.width =
                             (Jogadora.hotDog / 2) * 100 + "px";
+                        protaHp = Jogadora.hp;
                     }
 
                     setTimeout(() => {
@@ -159,7 +167,7 @@
                         }
                     } else {
                         luizaVida.style.width = Jogadora.hp + "px";
-
+                        protaHp = Jogadora.hp;
                         if (Jogadora.hotDog <= 0) {
                             luizaHotDog.style.width = "0px";
                         } else {
@@ -192,6 +200,7 @@
                     }, 2000);
                 } else {
                     luizaVida.style.width = Jogadora.hp + "px";
+                    protaHp = Jogadora.hp;
                 }
             }, 2000);
         } else {
@@ -276,7 +285,9 @@
                 <div id="status">
                     <p>{Jogadora.id}:</p>
                     <div id="luizaBarra1">
-                        <div id="luizaVida" />
+                        <div id="luizaVida" >
+                            {protaHp}
+                        </div>
                     </div>
                     <div id="luizaBarra2">
                         <div id="luizaPoder" />
@@ -325,7 +336,9 @@
                 <div id="statusBoss">
                     <p>{Ranieri.id}:</p>
                     <div id="bossBarra">
-                        <div id="bossVida" />
+                        <div id="bossVida" >
+                            {bossHp}
+                        </div>
                     </div>
                 </div>
                 <div id="bossImg">

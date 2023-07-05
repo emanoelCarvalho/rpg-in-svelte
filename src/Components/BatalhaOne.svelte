@@ -10,6 +10,8 @@
     import { set_attributes } from "svelte/internal";
 
     let contadorAtq = 0;
+    let protaHp;
+    let bossHp;
 
     setTimeout(() => {
         titulo1.style.fontSize = "2.5em";
@@ -30,6 +32,9 @@
 
         lili.hp = 128;
         bossVida.style.width = lili.hp + "px";
+
+        protaHp = Jogadora.hp;
+        bossHp = lili.hp;
 
         Jogadora.hp = 118;
         Jogadora.Ataque = 11;
@@ -66,7 +71,7 @@
                     }, 1000);
                 } else {
                     bossVida.style.width = lili.hp + "px";
-
+                    bossHp = lili.hp;
                     setTimeout(() => {
                         bossAtaque();
                     }, 1000);
@@ -86,7 +91,6 @@
 
         if (dado6 <= 4) {
             aleatorioAtaque();
-
             setTimeout(() => {
                 if (Jogadora.hp <= 0) {
                     luizaVida.style.width = "0px";
@@ -96,6 +100,8 @@
                     }, 1000);
                 } else {
                     luizaVida.style.width = Jogadora.hp + "px";
+
+                    protaHp = Jogadora.hp;
                 }
             }, 1000);
         } else {
@@ -136,12 +142,12 @@
             setTimeout(() => {
                 if (lili.hp <= 0) {
                     bossVida.style.width = "0px";
-
                     setTimeout(() => {
                         proximaFase();
                     }, 1000);
                 } else {
                     bossVida.style.width = lili.hp + "px";
+                    bossHp = lili.hp;
 
                     setTimeout(() => {
                         bossAtaque();
@@ -178,6 +184,7 @@
                     } else {
                         luizaCafe.style.width =
                             (Jogadora.cafe / 3) * 100 + "px";
+                            
                     }
 
                     setTimeout(() => {
@@ -187,6 +194,7 @@
             } else {
                 narrador.innerHTML = Jogadora.id + " tomou um cafezinho.";
                 Jogadora.HoraDoCafe();
+                protaHp = Jogadora.hp;
                 Jogadora.cafe--;
 
                 setTimeout(() => {
@@ -276,7 +284,9 @@
                 <div id="status">
                     <p>{Jogadora.id}:</p>
                     <div id="luizaBarra1">
-                        <div id="luizaVida" />
+                        <div id="luizaVida" style="text-align: center;">
+                            {protaHp}
+                        </div>
                     </div>
                     <div id="luizaBarra2">
                         <div id="luizaPoder" />
@@ -325,7 +335,9 @@
                 <div id="statusBoss">
                     <p>{lili.id}:</p>
                     <div id="bossBarra">
-                        <div id="bossVida" />
+                        <div id="bossVida" style="text-align: center;">
+                            {bossHp}
+                        </div>
                     </div>
                 </div>
                 <div id="bossImg">
