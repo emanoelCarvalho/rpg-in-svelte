@@ -285,7 +285,7 @@
                 <div id="status">
                     <p>{Jogadora.id}:</p>
                     <div id="luizaBarra1">
-                        <div id="luizaVida" >
+                        <div id="luizaVida" style="text-aling=center;">
                             {protaHp}
                         </div>
                     </div>
@@ -336,7 +336,7 @@
                 <div id="statusBoss">
                     <p>{Ranieri.id}:</p>
                     <div id="bossBarra">
-                        <div id="bossVida" >
+                        <div id="bossVida" style="text-aling=center;">
                             {bossHp}
                         </div>
                     </div>
