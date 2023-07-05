@@ -7,6 +7,9 @@
     import { Ranieri } from "../Data/Ranieri";
 
     let contadorAtq = 0;
+
+    
+    /*Variáveis para uso do HTML*/
     let protaHp;
     let bossHp;
 

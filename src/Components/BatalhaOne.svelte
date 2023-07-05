@@ -10,6 +10,9 @@
     import { set_attributes } from "svelte/internal";
 
     let contadorAtq = 0;
+
+    /*Variáveis para uso do HTML*/
+    
     let protaHp;
     let bossHp;
 
@@ -184,7 +187,6 @@
                     } else {
                         luizaCafe.style.width =
                             (Jogadora.cafe / 3) * 100 + "px";
-                            
                     }
 
                     setTimeout(() => {

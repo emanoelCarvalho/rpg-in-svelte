@@ -8,6 +8,9 @@
     import { trocarestadodojogo } from "../stores/Estado";
 
     let contadorAtq = 0;
+
+    
+    /*Variáveis para uso do HTML*/
     let protaHp;
     let bossHp;
 

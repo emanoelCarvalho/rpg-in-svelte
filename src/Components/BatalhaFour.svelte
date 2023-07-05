@@ -8,6 +8,10 @@
     let contadorAtq = 0;
     let allanCura = 1;
 
+    /*Variáveis para uso do HTML*/
+    let protaHp;
+    let bossHp;
+
     setTimeout(() => {
         titulo1.style.fontSize = "1.7em";
 
@@ -27,6 +31,9 @@
 
         Allan.hp = 250;
         bossVida.style.width = Allan.hp + "px";
+
+        protaHp = Jogadora.hp;
+        bossHp = Allan.hp;
 
         Jogadora.hp = 241;
         Jogadora.Ataque = 23;
@@ -64,6 +71,7 @@
                     }, 1000);
                 } else {
                     bossVida.style.width = Allan.hp + "px";
+                    bossHp = Allan.hp;
 
                     if (Allan.hp <= 75 && allanCura >= 1) {
                         Allan.hp += 100;
@@ -75,6 +83,7 @@
 
                             setTimeout(() => {
                                 bossVida.style.width = Allan.hp + "px";
+                                bossHp = Allan.hp;
                             }, 1500);
                         }, 1000);
                     }
@@ -113,6 +122,7 @@
                     }, 1000);
                 } else if (Allan.hp <= 0 && allanCura == 1) {
                     bossVida.style.width = "0px";
+                    bossHp = Allan.hp;
 
                     setTimeout(() => {
                         narrador.innerHTML = Allan.id + " Utilizou seu trunfo.";
@@ -204,6 +214,7 @@
                         }
                     } else {
                         luizaVida.style.width = Jogadora.hp + "px";
+                        protaHp = Jogadora.hp;
 
                         if (Jogadora.hotDog <= 0) {
                             luizaHotDog.style.width = "0px";
@@ -257,6 +268,7 @@
                     }, 2000);
                 } else {
                     luizaVida.style.width = Jogadora.hp + "px";
+                    protaHp = Jogadora.hp;
                 }
             }, 4000);
         } else {
@@ -272,7 +284,7 @@
                     }, 2000);
                 } else {
                     luizaVida.style.width = Jogadora.hp + "px";
-
+                    protaHp = Jogadora.hp;
                     if (contadorAtq <= 0) {
                         luizaPoder.style.width = "0px";
                     } else {
@@ -337,7 +349,9 @@
                 <div id="status">
                     <p>{Jogadora.id}:</p>
                     <div id="luizaBarra1">
-                        <div id="luizaVida" />
+                        <div id="luizaVida" style="text-align: center;">
+                            {protaHp}
+                        </div>
                     </div>
                     <div id="luizaBarra2">
                         <div id="luizaPoder" />
@@ -386,7 +400,9 @@
                 <div id="statusBoss">
                     <p>{Allan.id}:</p>
                     <div id="bossBarra">
-                        <div id="bossVida" />
+                        <div id="bossVida" style="text-align: center;" >
+                            {bossHp}
+                        </div>
                     </div>
                 </div>
                 <div id="bossImg">
