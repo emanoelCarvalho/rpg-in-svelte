@@ -9,10 +9,7 @@
 
     let contadorAtq = 0;
 
-    
     /*Variáveis para uso do HTML*/
-    let protaHp;
-    let bossHp;
 
     setTimeout(() => {
         titulo1.style.fontSize = "1.4em";
@@ -27,16 +24,12 @@
         }, 2000);
     }, 500);
 
-
     function iniciarLuta() {
         tela.style.zIndex = 0;
         telaB1.style.zIndex = 1;
 
         David.hp = 160;
         bossVida.style.width = David.hp + "px";
-
-        protaHp = Jogadora.hp;
-        bossHp = David.hp;
 
         Jogadora.hp = 158;
         Jogadora.Ataque = 14;
@@ -63,7 +56,6 @@
                 botaoAtt2.style.backgroundColor = "#0000FF";
             } else {
                 luizaPoder.style.width = (contadorAtq / 4) * 118 + "px";
-
             }
 
             setTimeout(() => {
@@ -75,7 +67,7 @@
                     }, 1000);
                 } else {
                     bossVida.style.width = David.hp + "px";
-                    bossHp = David.hp;
+
                     setTimeout(() => {
                         bossAtaque();
                     }, 1000);
@@ -110,7 +102,6 @@
                     }, 1000);
                 } else {
                     bossVida.style.width = David.hp + "px";
-                    bossHp = David.hp;
 
                     setTimeout(() => {
                         bossAtaque();
@@ -162,7 +153,6 @@
                     if (Jogadora.hp >= 158) {
                         Jogadora.hp = 158;
                         luizaVida.style.width = "158px";
-                        protaHp = Jogadora.hp;
 
                         if (Jogadora.cafe <= 0) {
                             luizaCafe.style.width = "0px";
@@ -172,7 +162,6 @@
                         }
                     } else {
                         luizaVida.style.width = Jogadora.hp + "px";
-                        protaHp = Jogadora.hp;
 
                         if (Jogadora.cafe <= 0) {
                             luizaCafe.style.width = "0px";
@@ -207,7 +196,6 @@
                     }, 1000);
                 } else {
                     luizaVida.style.width = Jogadora.hp + "px";
-                    protaHp = Jogadora.hp;
                 }
             }, 1000);
         } else {
@@ -289,9 +277,7 @@
                 <div id="status">
                     <p>{Jogadora.id}:</p>
                     <div id="luizaBarra1">
-                        <div id="luizaVida" style="text-align: center;">
-                            {protaHp}
-                        </div>
+                        <div id="luizaVida" />
                     </div>
                     <div id="luizaBarra2">
                         <div id="luizaPoder" />
@@ -340,9 +326,7 @@
                 <div id="statusBoss">
                     <p>{David.id}:</p>
                     <div id="bossBarra">
-                        <div id="bossVida" style="text-align: center;">
-                            {bossHp}
-                        </div>
+                        <div id="bossVida" />
                     </div>
                 </div>
                 <div id="bossImg">

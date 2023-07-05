@@ -11,11 +11,6 @@
 
     let contadorAtq = 0;
 
-    /*Variáveis para uso do HTML*/
-    
-    let protaHp;
-    let bossHp;
-
     setTimeout(() => {
         titulo1.style.fontSize = "2.5em";
 
@@ -36,8 +31,8 @@
         lili.hp = 128;
         bossVida.style.width = lili.hp + "px";
 
-        protaHp = Jogadora.hp;
-        bossHp = lili.hp;
+        
+        
 
         Jogadora.hp = 118;
         Jogadora.Ataque = 11;
@@ -74,7 +69,7 @@
                     }, 1000);
                 } else {
                     bossVida.style.width = lili.hp + "px";
-                    bossHp = lili.hp;
+                    
                     setTimeout(() => {
                         bossAtaque();
                     }, 1000);
@@ -104,7 +99,7 @@
                 } else {
                     luizaVida.style.width = Jogadora.hp + "px";
 
-                    protaHp = Jogadora.hp;
+                    
                 }
             }, 1000);
         } else {
@@ -150,7 +145,7 @@
                     }, 1000);
                 } else {
                     bossVida.style.width = lili.hp + "px";
-                    bossHp = lili.hp;
+                    
 
                     setTimeout(() => {
                         bossAtaque();
@@ -196,7 +191,7 @@
             } else {
                 narrador.innerHTML = Jogadora.id + " tomou um cafezinho.";
                 Jogadora.HoraDoCafe();
-                protaHp = Jogadora.hp;
+                
                 Jogadora.cafe--;
 
                 setTimeout(() => {
@@ -286,9 +281,7 @@
                 <div id="status">
                     <p>{Jogadora.id}:</p>
                     <div id="luizaBarra1">
-                        <div id="luizaVida" style="text-align: center;">
-                            {protaHp}
-                        </div>
+                        <div id="luizaVida" ></div>
                     </div>
                     <div id="luizaBarra2">
                         <div id="luizaPoder" />
@@ -337,9 +330,7 @@
                 <div id="statusBoss">
                     <p>{lili.id}:</p>
                     <div id="bossBarra">
-                        <div id="bossVida" style="text-align: center;">
-                            {bossHp}
-                        </div>
+                        <div id="bossVida" ></div>
                     </div>
                 </div>
                 <div id="bossImg">
