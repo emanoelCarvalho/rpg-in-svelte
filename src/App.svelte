@@ -1,8 +1,4 @@
 <script>
-  // import { lili } from "./Data/Liliane"
-  // import { David } from "./Data/David"
-  // import { Allan } from "./Data/Allan"
-  // import { Ranieri } from "./Data/Ranieri"
   import { david, rani, lili, allan } from "./Data/character";
   import { Jogadora } from "./Data/Protagonista"
   import { estado, trocarestadodojogo } from "./stores/Estado";
