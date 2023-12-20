@@ -4,11 +4,9 @@
     import { writable } from "svelte/store";
     import { estado, trocarestadodojogo } from "../stores/Estado";
     import { Jogadora } from "../Data/Protagonista";
-    import { Ranieri } from "../Data/Ranieri";
+    import { rani } from "../Data/character";
 
     let contadorAtq = 0;
-
-    /*Variáveis para uso do HTML*/
 
     setTimeout(() => {
         titulo1.style.fontSize = "1.5em";
@@ -27,8 +25,8 @@
         tela.style.zIndex = 0;
         telaB1.style.zIndex = 1;
 
-        Ranieri.hp = 200;
-        bossVida.style.width = Ranieri.hp + "px";
+        rani.hp = 200;
+        bossVida.style.width = rani.hp + "px";
 
         Jogadora.hp = 199;
         Jogadora.Ataque = 18;
@@ -46,7 +44,7 @@
 
         if (dado6 <= 4) {
             narrador.innerHTML = Jogadora.id + " Atacou com chuva da códigos.";
-            Jogadora.ChuvaDeCodigos(Ranieri);
+            Jogadora.ChuvaDeCodigos(rani);
             contadorAtq++;
 
             if (contadorAtq >= 4) {
@@ -57,14 +55,14 @@
             }
 
             setTimeout(() => {
-                if (Ranieri.hp <= 0) {
+                if (rani.hp <= 0) {
                     bossVida.style.width = "0px";
 
                     setTimeout(() => {
                         proximaFase();
                     }, 1000);
                 } else {
-                    bossVida.style.width = Ranieri.hp + "px";
+                    bossVida.style.width = rani.hp + "px";
 
                     setTimeout(() => {
                         bossAtaque();
@@ -86,20 +84,20 @@
             botaoAtt2.style.visibility = "hidden";
             botaoAtt3.style.visibility = "hidden";
             narrador.innerHTML = Jogadora.id + " utilizou o ataque recursão.";
-            Jogadora.Recursao(Ranieri);
+            Jogadora.Recursao(rani);
             contadorAtq = 0;
             luizaPoder.style.width = "0px";
             botaoAtt2.style.backgroundColor = "white";
 
             setTimeout(() => {
-                if (Ranieri.hp <= 0) {
+                if (rani.hp <= 0) {
                     bossVida.style.width = "0px";
 
                     setTimeout(() => {
                         proximaFase();
                     }, 1000);
                 } else {
-                    bossVida.style.width = Ranieri.hp + "px";
+                    bossVida.style.width = rani.hp + "px";
 
                     setTimeout(() => {
                         bossAtaque();
@@ -197,7 +195,7 @@
                 }
             }, 2000);
         } else {
-            narrador.innerHTML = Ranieri.id + " Errou o ataque.";
+            narrador.innerHTML = rani.id + " Errou o ataque.";
         }
         setTimeout(() => {
             narrador.innerHTML = "Sua vez";
@@ -211,12 +209,12 @@
         let dado12 = Math.floor(Math.random() * 13);
 
         if (dado12 <= 9) {
-            narrador.innerHTML = Ranieri.id + " usou Anti React.";
-            Ranieri.AntiReact(Jogadora);
+            narrador.innerHTML = rani.id + " usou Anti React.";
+            rani.AntiReact(Jogadora);
         } else {
             narrador.innerHTML =
-                Ranieri.id + " Usou o ataque, Mimosinha, muuuuh.";
-            Ranieri.Mimosinha(Jogadora);
+                rani.id + " Usou o ataque, Mimosinha, muuuuh.";
+            rani.Mimosinha(Jogadora);
         }
     }
 
@@ -325,7 +323,7 @@
         <div id="d2">
             <div id="boss">
                 <div id="statusBoss">
-                    <p>{Ranieri.id}:</p>
+                    <p>{rani.id}:</p>
                     <div id="bossBarra">
                         <div id="bossVida" />
                     </div>

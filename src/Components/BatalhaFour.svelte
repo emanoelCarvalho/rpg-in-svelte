@@ -2,7 +2,7 @@
     //@ts-nocheck
     import { trocarestadodojogo } from "../stores/Estado";
     import { Jogadora } from "../Data/Protagonista";
-    import { Allan } from "../Data/Allan";
+    import { allan } from "../Data/character";
 
     /*Bloco Do Protagonista, Battle 4*/
     let contadorAtq = 0;
@@ -25,8 +25,8 @@
         tela.style.zIndex = 0;
         telaB1.style.zIndex = 1;
 
-        Allan.hp = 250;
-        bossVida.style.width = Allan.hp + "px";
+        allan.hp = 250;
+        bossVida.style.width = allan.hp + "px";
 
         Jogadora.hp = 241;
         Jogadora.Ataque = 23;
@@ -44,7 +44,7 @@
 
         if (dado6 <= 4) {
             narrador.innerHTML = Jogadora.id + " Atacou com chuva da códigos.";
-            Jogadora.ChuvaDeCodigos(Allan);
+            Jogadora.ChuvaDeCodigos(allan);
             contadorAtq++;
 
             if (contadorAtq >= 4) {
@@ -56,25 +56,25 @@
             }
 
             setTimeout(() => {
-                if (Allan.hp <= 0) {
+                if (allan.hp <= 0) {
                     bossVida.style.width = "0px";
 
                     setTimeout(() => {
                         proximaFase();
                     }, 1000);
                 } else {
-                    bossVida.style.width = Allan.hp + "px";
+                    bossVida.style.width = allan.hp + "px";
 
-                    if (Allan.hp <= 75 && allanCura >= 1) {
-                        Allan.hp += 100;
+                    if (allan.hp <= 75 && allanCura >= 1) {
+                        allan.hp += 100;
                         allanCura--;
 
                         setTimeout(() => {
                             narrador.innerHTML =
-                                Allan.id + " Utilizou seu trunfo.";
+                                allan.id + " Utilizou seu trunfo.";
 
                             setTimeout(() => {
-                                bossVida.style.width = Allan.hp + "px";
+                                bossVida.style.width = allan.hp + "px";
                             }, 1500);
                         }, 1000);
                     }
@@ -99,48 +99,48 @@
             botaoAtt2.style.visibility = "hidden";
             botaoAtt3.style.visibility = "hidden";
             narrador.innerHTML = Jogadora.id + " utilizou o ataque recursão.";
-            Jogadora.Recursao(Allan);
+            Jogadora.Recursao(allan);
             contadorAtq = 0;
             luizaPoder.style.width = "0px";
             botaoAtt2.style.backgroundColor = "white";
 
             setTimeout(() => {
-                if (Allan.hp <= 0) {
+                if (allan.hp <= 0) {
                     bossVida.style.width = "0px";
 
                     setTimeout(() => {
                         proximaFase();
                     }, 1000);
-                } else if (Allan.hp <= 0 && allanCura == 1) {
+                } else if (allan.hp <= 0 && allanCura == 1) {
                     bossVida.style.width = "0px";
 
                     setTimeout(() => {
-                        narrador.innerHTML = Allan.id + " Utilizou seu trunfo.";
-                        Allan.hp = 120;
+                        narrador.innerHTML = allan.id + " Utilizou seu trunfo.";
+                        allan.hp = 120;
                         allanCura--;
 
                         setTimeout(() => {
-                            bossVida.style.width = Allan.hp + "px";
+                            bossVida.style.width = allan.hp + "px";
 
                             setTimeout(() => {
                                 bossAtaque();
                             }, 1500);
                         }, 2000);
                     }, 2000);
-                } else if (Allan.hp > 0) {
-                    bossVida.style.width = Allan.hp + "px";
+                } else if (allan.hp > 0) {
+                    bossVida.style.width = allan.hp + "px";
 
                     setTimeout(() => {
                         bossAtaque();
                     }, 1500);
-                } else if (Allan.hp <= 75 && allanCura == 1) {
+                } else if (allan.hp <= 75 && allanCura == 1) {
                     setTimeout(() => {
-                        narrador.innerHTML = Allan.id + " Utilizou seu trunfo.";
-                        Allan.hp += 100;
+                        narrador.innerHTML = allan.id + " Utilizou seu trunfo.";
+                        allan.hp += 100;
                         allanCura--;
 
                         setTimeout(() => {
-                            bossVida.style.width = Allan.hp + "px";
+                            bossVida.style.width = allan.hp + "px";
 
                             setTimeout(() => {
                                 bossAtaque();
@@ -229,7 +229,7 @@
         if (dado6 <= 4) {
             aleatorioAtaque();
         } else {
-            narrador.innerHTML = Allan.id + " Errou o ataque.";
+            narrador.innerHTML = allan.id + " Errou o ataque.";
         }
         setTimeout(() => {
             narrador.innerHTML = "Sua vez";
@@ -244,9 +244,9 @@
 
         if (dado12 <= 10) {
             narrador.innerHTML =
-                Allan.id +
+                allan.id +
                 " usou o ataque Cheirinho nesse código, e sentiu cheiro de caquinha nesse codigo.";
-            Allan.CheirinhoNesseCodigo(Jogadora);
+            allan.CheirinhoNesseCodigo(Jogadora);
 
             setTimeout(() => {
                 if (Jogadora.hp <= 0) {
@@ -260,8 +260,8 @@
                 }
             }, 4000);
         } else {
-            narrador.innerHTML = Allan.id + " Usou o ataque Assembly.";
-            Allan.Assembly(Jogadora);
+            narrador.innerHTML = allan.id + " Usou o ataque Assembly.";
+            allan.Assembly(Jogadora);
 
             setTimeout(() => {
                 if (Jogadora.hp <= 0) {
@@ -384,7 +384,7 @@
         <div id="d2">
             <div id="boss">
                 <div id="statusBoss">
-                    <p>{Allan.id}:</p>
+                    <p>{allan.id}:</p>
                     <div id="bossBarra">
                         <div id="bossVida" />
                     </div>

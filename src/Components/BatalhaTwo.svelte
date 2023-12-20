@@ -2,7 +2,7 @@
     //@ts-nocheck
     import { estado } from "../stores/Estado";
     import { Jogadora } from "../Data/Protagonista";
-    import { David } from "../Data/David";
+    import { david } from "../Data/character";
     import { writable } from "svelte/store";
     import Jogar from "../Components/Jogar.svelte";
     import { trocarestadodojogo } from "../stores/Estado";
@@ -28,8 +28,8 @@
         tela.style.zIndex = 0;
         telaB1.style.zIndex = 1;
 
-        David.hp = 160;
-        bossVida.style.width = David.hp + "px";
+        david.hp = 160;
+        bossVida.style.width = david.hp + "px";
 
         Jogadora.hp = 158;
         Jogadora.Ataque = 14;
@@ -48,7 +48,7 @@
 
         if (dado6 <= 4) {
             narrador.innerHTML = Jogadora.id + " Atacou com chuva da códigos.";
-            Jogadora.ChuvaDeCodigos(David);
+            Jogadora.ChuvaDeCodigos(david);
             contadorAtq++;
 
             if (contadorAtq >= 4) {
@@ -59,14 +59,14 @@
             }
 
             setTimeout(() => {
-                if (David.hp <= 0) {
+                if (david.hp <= 0) {
                     bossVida.style.width = "0px";
 
                     setTimeout(() => {
                         proximaFase();
                     }, 1000);
                 } else {
-                    bossVida.style.width = David.hp + "px";
+                    bossVida.style.width = david.hp + "px";
 
                     setTimeout(() => {
                         bossAtaque();
@@ -88,20 +88,20 @@
             botaoAtt2.style.visibility = "hidden";
             botaoAtt3.style.visibility = "hidden";
             narrador.innerHTML = Jogadora.id + " utilizou o ataque recursão. ";
-            Jogadora.Recursao(David);
+            Jogadora.Recursao(david);
             contadorAtq = 0;
             luizaPoder.style.width = "0px";
             botaoAtt2.style.backgroundColor = "white";
 
             setTimeout(() => {
-                if (David.hp <= 0) {
+                if (david.hp <= 0) {
                     bossVida.style.width = "0px";
 
                     setTimeout(() => {
                         proximaFase();
                     }, 1000);
                 } else {
-                    bossVida.style.width = David.hp + "px";
+                    bossVida.style.width = david.hp + "px";
 
                     setTimeout(() => {
                         bossAtaque();
@@ -199,7 +199,7 @@
                 }
             }, 1000);
         } else {
-            narrador.innerHTML = David.id + " Errou o ataque.";
+            narrador.innerHTML = david.id + " Errou o ataque.";
         }
 
         setTimeout(() => {
@@ -214,11 +214,11 @@
         let dado12 = Math.floor(Math.random() * 13);
 
         if (dado12 <= 8) {
-            narrador.innerHTML = David.id + " usou Packet Tracer.";
-            David.PacketTracer(Jogadora);
+            narrador.innerHTML = david.id + " usou Packet Tracer.";
+            david.PacketTracer(Jogadora);
         } else {
-            narrador.innerHTML = David.id + " Usou o ataque, partiu Crossfit.";
-            David.PartiuCrossfit(Jogadora);
+            narrador.innerHTML = david.id + " Usou o ataque, partiu Crossfit.";
+            david.PartiuCrossfit(Jogadora);
         }
     }
 
@@ -324,7 +324,7 @@
         <div id="d2">
             <div id="boss">
                 <div id="statusBoss">
-                    <p>{David.id}:</p>
+                    <p>{david.id}:</p>
                     <div id="bossBarra">
                         <div id="bossVida" />
                     </div>

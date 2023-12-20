@@ -1,8 +1,9 @@
 <script>
-  import { lili } from "./Data/Liliane"
-  import { David } from "./Data/David"
-  import { Ranieri } from "./Data/Ranieri"
-  import { Allan } from "./Data/Allan"
+  // import { lili } from "./Data/Liliane"
+  // import { David } from "./Data/David"
+  // import { Allan } from "./Data/Allan"
+  // import { Ranieri } from "./Data/Ranieri"
+  import { david, rani, lili, allan } from "./Data/character";
   import { Jogadora } from "./Data/Protagonista"
   import { estado, trocarestadodojogo } from "./stores/Estado";
   import Menu from "./Components/Menu.svelte";
@@ -37,9 +38,9 @@
     desenhos.push(mapaInicial);
     desenhos.push(Jogadora);
     blocos.push(lili);
-    blocos.push(David);
-    blocos.push(Allan);
-    blocos.push(Ranieri);
+    blocos.push(david);
+    blocos.push(allan);
+    blocos.push(rani);
     // camera
     class camera {
       constructor(x, y) {
@@ -192,9 +193,9 @@
             Jogadora.posX = 2296;
             Jogadora.posY = 553;
 
-            Allan.posY = -100;
-            David.posY = -100;
-            Ranieri.posY = -100;
+            allan.posY = -100;
+            david.posY = -100;
+            rani.posY = -100;
             lili.posY = 16;
 
             r1.posY += overLapY;
@@ -211,9 +212,9 @@
               Jogadora.posY = 553;
               r1.posY += overLapY;
 
-              Allan.posY = -100;
-              David.posY = 16;
-              Ranieri.posY = -100;
+              allan.posY = -100;
+              david.posY = 16;
+              rani.posY = -100;
               lili.posY = -100;
 
               saidaBlocoA.posY = 800;
@@ -237,9 +238,9 @@
               Jogadora.posY = 553;
               r1.posY += overLapY;
 
-              Allan.posY = -100;
-              David.posY = -100;
-              Ranieri.posY = 16;
+              allan.posY = -100;
+              david.posY = -100;
+              rani.posY = 16;
               lili.posY = -100;
 
               saidaBlocoA.posY = 800;
@@ -263,9 +264,9 @@
               Jogadora.posY = 553;
               r1.posY += overLapY;
 
-              Allan.posY = 16;
-              David.posY = -100;
-              Ranieri.posY = -100;
+              allan.posY = 16;
+              david.posY = -100;
+              rani.posY = -100;
               lili.posY = -100;
 
               saidaBlocoA.posY = 800;
@@ -300,7 +301,7 @@
             }
           } else if (catY > 0 && r2.id == "David") {
             if (!Jogadora.certificadoDavid) {
-              r1.mvCima = r1.mvEsquerda = r1.mvDireita = r1.mvBaixo = false;
+              r1.mvCima = r1.mvEsquerda = r1.mvDireita = r1.mvBaixo = false;  
               r1.posY += overLapY + 5;
               trocarestadodojogo("b2");
             } else {
