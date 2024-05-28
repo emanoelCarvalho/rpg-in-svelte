@@ -4,7 +4,6 @@
     import { Jogadora } from "../Data/Protagonista";
     import { allan } from "../Data/character";
 
-    /*Bloco Do Protagonista, Battle 4*/
     let contadorAtq = 0;
     let allanCura = 1;
 

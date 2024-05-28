@@ -1,15 +1,11 @@
 <script>
     //@ts-nocheck
-    import { estado } from "../stores/Estado";
     import { Jogadora } from "../Data/Protagonista";
     import { david } from "../Data/character";
-    import { writable } from "svelte/store";
-    import Jogar from "../Components/Jogar.svelte";
     import { trocarestadodojogo } from "../stores/Estado";
 
     let contadorAtq = 0;
 
-    /*Variáveis para uso do HTML*/
 
     setTimeout(() => {
         titulo1.style.fontSize = "1.4em";
@@ -38,7 +34,6 @@
         luizaVida.style.width = Jogadora.hp + "px";
         luizaCafe.style.width = "100px";
     }
-    /* Bloco Do Protagonista*/
 
     function ataqueProta() {
         let dado6 = Math.floor(Math.random() * 7);
@@ -179,7 +174,6 @@
         }
     }
 
-    /*Bloco Boss*/
 
     function bossAtaque() {
         let dado6 = Math.round(Math.random() * 7);

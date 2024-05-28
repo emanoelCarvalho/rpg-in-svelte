@@ -1,13 +1,10 @@
 <script>
     // @ts-nocheck
 
-    //import { estado, trocarestadodojogo } from "../Estado";
     import { Jogadora } from "../Data/Protagonista";
     import { lili } from "../Data/character";
-    import { writable } from "svelte/store";
-    import Jogar from "./Jogar.svelte";
     import { trocarestadodojogo } from "../stores/Estado";
-    import { set_attributes } from "svelte/internal";
+
 
     let contadorAtq = 0;
 
